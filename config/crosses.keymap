@@ -6,6 +6,15 @@
 / {
     chosen { zmk,physical-layout = &gggw_crosses_54_layout; };
 
+    macros {
+        SomXAffengriff: SomXAffengriff {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp DELETE &kp KP_PLUS>;
+            label = "SOMXAFFENGRIFF";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -34,11 +43,11 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-&kp TILDE  &kp F1     &kp F2     &kp F3     &kp F4    &kp F5     &kp F6     &kp F7     &kp F8           &kp F9    &kp F10   &kp F11
-&trans     &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp F12
-&trans     &kp RA(Q)  &kp RA(Y)  &kp RA(P)  &trans    &trans     &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&trans     &trans     &trans     &trans     &trans    &trans     &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                                 &trans     &trans    &trans     &trans     &trans     &trans
+&kp TILDE  &kp F1     &kp F2     &kp F3     &kp F4    &kp F5           &kp F6     &kp F7     &kp F8           &kp F9    &kp F10   &kp F11
+&trans     &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT        &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp F12
+&trans     &kp RA(Q)  &kp RA(Y)  &kp RA(P)  &trans    &trans           &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
+&trans     &trans     &trans     &trans     &trans    &SomXAffengriff  &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                                 &trans     &trans    &trans           &trans     &trans     &trans
             >;
         };
 
