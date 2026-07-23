@@ -1,4 +1,3 @@
 &trackball_peripheral {
     cpi = <1600>;
-    res-cpi = <1600>;
 };

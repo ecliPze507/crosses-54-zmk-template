@@ -1,4 +1,3 @@
 &trackball_central {
     cpi = <1600>;
-    res-cpi = <1600>;
 };
