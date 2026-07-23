@@ -63,3 +63,13 @@
         };
     };
 };
+
+&trackball_central {
+    cpi = <1600>;
+    res-cpi = <1600>;
+};
+
+&trackball_peripheral {
+    cpi = <1600>;
+    res-cpi = <1600>;
+};
