@@ -4,7 +4,15 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    chosen { zmk,physical-layout = &gggw_crosses_54_layout; };
+    chosen {
+        zmk,physical-layout = &gggw_crosses_54_layout;
+        zmk,battery = &vbatt;
+    };
+
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+        label = "BATTERY";
+    };
 
     macros {
         SomXAffengriff: SomXAffengriff {
