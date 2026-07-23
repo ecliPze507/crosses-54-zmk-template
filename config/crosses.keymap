@@ -18,7 +18,10 @@
         SomXAffengriff: SomXAffengriff {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp TAB &kp DELETE &kp KP_PLUS>;
+            bindings
+                = <&macro_press &kp TAB &kp DELETE &kp KP_PLUS>
+                , <&macro_release &kp TAB &kp DELETE &kp KP_PLUS>
+                ;
             label = "SOMXAFFENGRIFF";
         };
     };
